@@ -1,4 +1,4 @@
-// Fuses (E:FF, H:FF, L:73) - 128kHz as cpu clock
+// Fuses (High byte = 0xFF, Low byte = 0x73) - 128kHz as cpu clock
 
 #include <avr/io.h>
 #include <avr/interrupt.h>

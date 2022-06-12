@@ -10,7 +10,7 @@ clean:
 	rm -f sc.hex sc.bin
 
 flash: sc.hex
-	avrdude -c usbasp -p t13 -U flash:w:sc.hex:i -B50
+	avrdude -c usbasp -p t13 -U hfuse:w:0xFF:m -U lfuse:w:0x73:m -U flash:w:sc.hex:i -B50
 
 disasm:	sc.bin
 	avr-objdump -d sc.bin
